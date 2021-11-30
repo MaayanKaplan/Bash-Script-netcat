@@ -11,7 +11,7 @@ if ( nc -zv $ip_address $port 2>&1 >/dev/null ); then #If he's connected the pri
     clear='\033[0m'
     echo " ${green}Client is Online, trying to connect... ${clear} "
     sleep 2s #Pauses the script for 2 seconds. 
-    nc -nv 172.16.141.137 5555
+    nc -nv $ip_address 5555 #5555 is a random port.
 else #If he's not connected, the print "Client is Offline" will apear and the script will stop.
     red='\033[0;31m'
     clear='\033[0m' # No Color
